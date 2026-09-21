@@ -1,16 +1,17 @@
-## Hi there 👋
+# Libby Mays
 
-<!--
-**libbymays/libbymays** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Founder and product developer building SaaS products around real workflow problems.
 
-Here are some ideas to get you started:
+## MLSocial
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Founder of [MLSocial](https://mlsocial.ai), an AI-enabled real estate marketing platform designed to streamline the path from property listing to branded social content.
+
+## ContractIQ
+
+Founder and product developer of [ContractIQ](https://www.coniq.app), a contract operations and contract lifecycle management platform designed around contract intake, review, redlining, approvals, collaboration, execution, and lifecycle visibility.
+
+## Professional Focus
+
+Technology Contracts • Contract Lifecycle Management • Legal Operations • SaaS Product Development • AI-Enabled Workflow Design
+
+[Portfolio](https://libbymays.tech) • [LinkedIn](https://www.linkedin.com/in/libby-mays)
