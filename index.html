@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mexico City Money Calendar</title>
+  <meta name="description" content="Mexico City trip countdown and money calendar for Oct 28–Nov 1, 2026." />
+  <style>
+    :root{
+      --bg:#f6f2ea;--paper:#fffdf9;--ink:#25231f;--muted:#777066;--line:#ded7cc;
+      --green:#315f4a;--green-soft:#e8f0eb;--gold:#b38a3e;--gold-soft:#f6ecd7;
+      --blue:#315c7b;--blue-soft:#e8f0f6;--red:#934a42;--red-soft:#f7e9e6;
+      --shadow:0 10px 28px rgba(53,45,32,.08)
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    button,input,textarea{font:inherit}
+    .shell{max-width:1180px;margin:auto;padding:20px}
+    .hero{background:linear-gradient(135deg,#243d34,#315f4a 65%,#3f745c);color:#fff;border-radius:24px;padding:24px;box-shadow:var(--shadow)}
+    .eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.78;font-weight:700}
+    .hero-row{display:flex;gap:20px;justify-content:space-between;align-items:end;flex-wrap:wrap}
+    h1{font-size:clamp(26px,4vw,44px);line-height:1.05;margin:8px 0 6px}
+    .subtitle{margin:0;opacity:.82}
+    .countdown{display:grid;grid-template-columns:repeat(4,minmax(62px,1fr));gap:8px;min-width:min(100%,390px)}
+    .timebox{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);border-radius:14px;padding:12px 9px;text-align:center}
+    .timebox b{display:block;font-size:clamp(23px,4vw,34px);line-height:1}
+    .timebox span{font-size:11px;text-transform:uppercase;letter-spacing:.09em;opacity:.76}
+    .sync{margin-top:12px;font-size:12px;opacity:.75}
+    .grid-summary{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:16px 0}
+    .stat{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 3px 12px rgba(53,45,32,.035)}
+    .stat .label{color:var(--muted);font-size:12px;font-weight:700}
+    .stat .value{font-size:22px;font-weight:800;margin-top:3px}
+    .stat small{display:block;color:var(--muted);margin-top:2px}
+    .toolbar{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:14px;margin:16px 0;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:end}
+    label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:5px}
+    input[type=number],textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px;color:var(--ink)}
+    input:focus,textarea:focus,button:focus{outline:3px solid rgba(49,95,74,.2);outline-offset:1px}
+    .save{border:0;background:var(--green);color:white;border-radius:11px;padding:11px 14px;font-weight:800;cursor:pointer;min-height:42px}
+    .save[disabled]{opacity:.55;cursor:wait}
+    .save-status{font-size:12px;color:var(--muted);align-self:center}
+    .legend{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 18px}
+    .pill{font-size:12px;border:1px solid var(--line);background:var(--paper);padding:6px 9px;border-radius:999px}
+    .month{margin:24px 0}
+    .month-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    .month h2{margin:0;font-size:22px}
+    .weekdays,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+    .weekdays div{text-align:center;color:var(--muted);font-size:12px;font-weight:800;padding:4px 0}
+    .day{min-height:128px;background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:9px;overflow:hidden}
+    .day.blank{background:transparent;border-color:transparent}
+    .day.today{border:2px solid var(--green);background:var(--green-soft)}
+    .day.trip{border:2px solid var(--gold);background:var(--gold-soft)}
+    .day.payday{background:var(--blue-soft)}
+    .day.major{border:2px solid var(--blue)}
+    .num{font-weight:900;font-size:13px;margin-bottom:6px}
+    .event{font-size:11px;line-height:1.35;margin:5px 0;padding:5px 6px;border-radius:8px;background:rgba(255,255,255,.58)}
+    .event strong{font-size:11px}
+    .event.done{opacity:.5;text-decoration:line-through}
+    .check{width:100%;border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 6px;margin-top:5px;font-size:10px;font-weight:800;cursor:pointer;color:var(--ink)}
+    .check.done{background:var(--green);color:#fff;border-color:var(--green)}
+    .bottom{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin:22px 0 35px}
+    .panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px}
+    .panel h3{margin:0 0 10px;font-size:16px}
+    textarea{min-height:110px;resize:vertical}
+    .guardrails{margin:0;padding-left:20px;color:var(--muted);line-height:1.55;font-size:13px}
+    .guardrails b{color:var(--ink)}
+    .footer{font-size:12px;color:var(--muted);text-align:center;padding-bottom:18px}
+    @media (max-width:900px){
+      .grid-summary{grid-template-columns:repeat(2,1fr)}
+      .toolbar{grid-template-columns:repeat(2,1fr)}
+      .days{gap:4px}.day{min-height:112px;padding:7px}.event{font-size:10px}
+      .bottom{grid-template-columns:1fr}
+    }
+    @media (max-width:620px){
+      .shell{padding:10px}
+      .hero{border-radius:18px;padding:18px}
+      .countdown{width:100%;min-width:0}
+      .grid-summary{grid-template-columns:1fr 1fr}
+      .toolbar{grid-template-columns:1fr 1fr}
+      .weekdays div{font-size:10px}
+      .days{grid-template-columns:repeat(7,minmax(72px,1fr));min-width:540px}
+      .weekdays{grid-template-columns:repeat(7,minmax(72px,1fr));min-width:540px}
+      .calendar-scroll{overflow-x:auto;padding-bottom:5px}
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-row">
+        <div>
+          <div class="eyebrow">Mexico City · Oct 28–Nov 1, 2026</div>
+          <h1>Money Calendar + Trip Countdown</h1>
+          <p class="subtitle">Keep the house money protected, get the flight + soccer early, and watch the trip fund grow.</p>
+        </div>
+        <div>
+          <div class="countdown" aria-label="Countdown to October 28">
+            <div class="timebox"><b id="days">--</b><span>Days</span></div>
+            <div class="timebox"><b id="hours">--</b><span>Hours</span></div>
+            <div class="timebox"><b id="mins">--</b><span>Minutes</span></div>
+            <div class="timebox"><b id="secs">--</b><span>Seconds</span></div>
+          </div>
+          <div class="sync" id="syncText">Loading saved plan…</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-summary">
+      <div class="stat"><div class="label">CURRENT SAVINGS</div><div class="value" id="savingsOut">$300.00</div><small>edit anytime</small></div>
+      <div class="stat"><div class="label">FLIGHT FUND</div><div class="value" id="flightOut">$0.00</div><small>goal $750</small></div>
+      <div class="stat"><div class="label">HOTEL RESERVED</div><div class="value" id="hotelOut">$0.00</div><small>goal $610.50</small></div>
+      <div class="stat"><div class="label">TRIP CUSHION</div><div class="value" id="cushionOut">$0.00</div><small>food · Uber · souvenirs</small></div>
+      <div class="stat"><div class="label">SPENT IN MEXICO</div><div class="value" id="spentOut">$0.00</div><small>update during trip</small></div>
+    </section>
+
+    <section class="toolbar" aria-label="Update balances">
+      <div><label for="savings">Current savings</label><input id="savings" type="number" min="0" step=".01" value="300"></div>
+      <div><label for="flightFund">Flight fund</label><input id="flightFund" type="number" min="0" step=".01" value="0"></div>
+      <div><label for="hotelFund">Hotel reserved</label><input id="hotelFund" type="number" min="0" step=".01" value="0"></div>
+      <div><label for="tripCushion">Trip cushion</label><input id="tripCushion" type="number" min="0" step=".01" value="0"></div>
+      <div><label for="tripSpent">Mexico spent</label><input id="tripSpent" type="number" min="0" step=".01" value="0"></div>
+      <button class="save" id="saveBtn" type="button">Save update</button>
+      <div class="save-status" id="saveStatus" aria-live="polite">Changes save online.</div>
+    </section>
+
+    <div class="legend">
+      <span class="pill">💰 money in</span><span class="pill">🏠 bills / protected</span><span class="pill">✈️ Mexico</span>
+      <span class="pill">🛒 groceries</span><span class="pill">🎓 Vanderbilt</span><span class="pill">✓ tap an action when done</span>
+    </div>
+
+    <section class="month">
+      <div class="month-head"><h2>September 2026</h2></div>
+      <div class="calendar-scroll">
+        <div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div>
+        <div class="days">
+          <div class="day blank"></div><div class="day blank"></div><div class="day blank"></div>
+          <div class="day"><div class="num">23</div></div>
+          <div class="day today"><div class="num">24 · TODAY</div>
+            <div class="event">Savings now: <strong>$300</strong></div>
+            <div class="event" data-event="soccer">⚽ Soccer <strong>−$100</strong><button class="check" data-key="soccer">Mark done</button></div>
+            <div class="event" data-event="vanderbilt">🎓 Vanderbilt <strong>−$49</strong><button class="check" data-key="vanderbilt">Mark done</button></div>
+            <div class="event">Projected after both: <strong>$151</strong></div>
+          </div>
+          <div class="day"><div class="num">25</div></div>
+          <div class="day"><div class="num">26</div></div>
+          <div class="day"><div class="num">27</div></div><div class="day"><div class="num">28</div></div>
+          <div class="day payday"><div class="num">29 · TUE</div>
+            <div class="event">💰 <strong>+$350</strong></div><div class="event">🛒 Groceries <strong>−$100</strong></div>
+            <div class="event">✈️ Flight fund <strong>+$250</strong><button class="check" data-key="sep29">Mark done</button></div>
+          </div>
+          <div class="day payday"><div class="num">30 · PAYDAY</div>
+            <div class="event">💰 <strong>+$3,100</strong></div><div class="event">🏠 Protect <strong>$3,000</strong></div>
+            <div class="event">✈️ Flight fund <strong>+$100</strong><button class="check" data-key="sep30">Mark done</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="month">
+      <div class="month-head"><h2>October 2026</h2></div>
+      <div class="calendar-scroll">
+        <div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div>
+        <div class="days">
+          <div class="day blank"></div><div class="day blank"></div><div class="day blank"></div><div class="day blank"></div>
+          <div class="day"><div class="num">1</div><div class="event">🏠 House window opens<br><strong>$3,000 protected</strong></div></div>
+          <div class="day"><div class="num">2</div></div><div class="day"><div class="num">3</div></div>
+          <div class="day"><div class="num">4</div></div>
+          <div class="day major"><div class="num">5</div><div class="event">🏠 Pay house <strong>−$3,000</strong><button class="check" data-key="octHouse">Mark paid</button></div></div>
+          <div class="day payday"><div class="num">6 · TUE</div><div class="event">💰 +$350</div><div class="event">🛒 −$100</div><div class="event">✈️ +$250 → fund $600<button class="check" data-key="oct6">Mark done</button></div></div>
+          <div class="day"><div class="num">7</div></div><div class="day"><div class="num">8</div></div><div class="day"><div class="num">9</div></div><div class="day"><div class="num">10</div></div>
+          <div class="day"><div class="num">11</div></div><div class="day"><div class="num">12</div></div>
+          <div class="day payday"><div class="num">13 · TUE</div><div class="event">💰 +$350</div><div class="event">🛒 −$100</div><div class="event">✈️ Add $150 → <strong>BUY $750 FLIGHT</strong><br>Keep $100<button class="check" data-key="flightBought">Mark flight paid</button></div></div>
+          <div class="day"><div class="num">14</div></div>
+          <div class="day major"><div class="num">15 · PAYDAY</div>
+            <div class="event">💰 <strong>+$3,100</strong></div>
+            <div class="event">🏠 −$605 · −$545 · −$332</div>
+            <div class="event">💵 Reserve $600</div>
+            <div class="event">🏨 Reserve <strong>$610.50</strong></div>
+            <div class="event">Projected left <strong>$407.50</strong><button class="check" data-key="oct15">Mark handled</button></div>
+          </div>
+          <div class="day"><div class="num">16</div></div><div class="day"><div class="num">17</div></div>
+          <div class="day"><div class="num">18</div></div><div class="day"><div class="num">19</div></div>
+          <div class="day payday"><div class="num">20 · TUE</div><div class="event">💰 +$350</div><div class="event">🛒 −$100</div><div class="event">🇲🇽 Cushion <strong>+$250</strong><button class="check" data-key="oct20">Mark done</button></div></div>
+          <div class="day"><div class="num">21</div></div><div class="day"><div class="num">22</div></div><div class="day"><div class="num">23</div></div><div class="day"><div class="num">24</div></div>
+          <div class="day"><div class="num">25</div></div><div class="day"><div class="num">26</div></div>
+          <div class="day payday"><div class="num">27 · TUE</div><div class="event">💰 +$350</div><div class="event">🛒 −$100</div><div class="event">🇲🇽 Cushion <strong>+$250</strong><button class="check" data-key="oct27">Mark done</button></div></div>
+          <div class="day trip"><div class="num">28 · MEXICO! 🇲🇽</div><div class="event">🏨 Use reserved <strong>$610.50</strong></div><div class="event">✈️ Flight paid</div><div class="event">⚽ Soccer paid<button class="check" data-key="departed">We're off!</button></div></div>
+          <div class="day trip"><div class="num">29</div><div class="event">🇲🇽 Mexico City<br>Food · Uber · souvenirs</div></div>
+          <div class="day trip major"><div class="num">30 · PAYDAY</div><div class="event">💰 <strong>+$3,100</strong></div><div class="event">🏠 $3,000 = November house</div><div class="event">🎉 Up to <strong>$350 max spending</strong><br>$100 extra + borrow $250 temporarily<button class="check" data-key="oct30">Mark plan set</button></div></div>
+          <div class="day trip"><div class="num">31</div><div class="event">🇲🇽 Mexico City<br>Stay within Oct. 30 limit</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="month">
+      <div class="month-head"><h2>November 2026</h2></div>
+      <div class="calendar-scroll">
+        <div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div>
+        <div class="days">
+          <div class="day trip"><div class="num">1</div><div class="event">🇲🇽 Last day<br>✈️ Fly home<button class="check" data-key="home">Home!</button></div></div>
+          <div class="day"><div class="num">2</div><div class="event">🏠 Protect remaining house money<br><strong>No more borrowing</strong></div></div>
+          <div class="day payday major"><div class="num">3 · TUE</div><div class="event">💰 +$350</div><div class="event">🛒 −$100</div><div class="event">🏠 Put <strong>$250 back</strong><button class="check" data-key="nov3">Mark restored</button></div></div>
+          <div class="day"><div class="num">4</div><div class="event">🏠 House money ready</div></div>
+          <div class="day major"><div class="num">5</div><div class="event">🏠 <strong>PAY $3,000 HOUSE</strong><button class="check" data-key="novHouse">Mark paid</button></div></div>
+          <div class="day"><div class="num">6</div></div><div class="day"><div class="num">7</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom">
+      <div class="panel">
+        <h3>Notes / actual spending</h3>
+        <textarea id="notes" placeholder="Example: Plane booked for $712 instead of $750; tacos $18; Uber $9…"></textarea>
+        <button class="save" id="saveNotes" type="button" style="margin-top:8px">Save notes</button>
+      </div>
+      <div class="panel">
+        <h3>Money guardrails</h3>
+        <ul class="guardrails">
+          <li><b>$3,000 house money stays protected.</b></li>
+          <li><b>$610.50 hotel reserve</b> is separate from spending money.</li>
+          <li>Every Tuesday: <b>$100 groceries first.</b></li>
+          <li>Oct. 30: <b>$350 maximum</b> additional Mexico spending from that check.</li>
+          <li>Nov. 3: restore <b>$250</b> to the house fund before Nov. 5.</li>
+        </ul>
+      </div>
+    </section>
+    <div class="footer">Mexico City Money Calendar · saved online through Netlify</div>
+  </main>
+
+  <script>
+    const API='/api/state';
+    const defaults={savings:300,flightFund:0,hotelFund:0,tripCushion:0,tripSpent:0,notes:'',completed:{}};
+    let state={...defaults,completed:{}};
+    const $=id=>document.getElementById(id);
+    const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(Number(n||0));
+
+    function countdown(){
+      const target=new Date('2026-10-28T00:00:00-07:00').getTime();
+      const diff=Math.max(0,target-Date.now());
+      $('days').textContent=Math.floor(diff/86400000);
+      $('hours').textContent=String(Math.floor(diff%86400000/3600000)).padStart(2,'0');
+      $('mins').textContent=String(Math.floor(diff%3600000/60000)).padStart(2,'0');
+      $('secs').textContent=String(Math.floor(diff%60000/1000)).padStart(2,'0');
+    }
+    setInterval(countdown,1000);countdown();
+
+    function render(){
+      ['savings','flightFund','hotelFund','tripCushion','tripSpent'].forEach(k=>{
+        $(k).value=Number(state[k]??defaults[k]);
+      });
+      $('notes').value=state.notes||'';
+      $('savingsOut').textContent=money(state.savings);
+      $('flightOut').textContent=money(state.flightFund);
+      $('hotelOut').textContent=money(state.hotelFund);
+      $('cushionOut').textContent=money(state.tripCushion);
+      $('spentOut').textContent=money(state.tripSpent);
+      document.querySelectorAll('.check').forEach(btn=>{
+        const done=!!state.completed?.[btn.dataset.key];
+        btn.classList.toggle('done',done);
+        btn.textContent=done?'✓ Done':(
+          btn.dataset.key==='flightBought'?'Mark flight paid':
+          btn.dataset.key==='octHouse'||btn.dataset.key==='novHouse'?'Mark paid':
+          btn.dataset.key==='departed'?'We’re off!':
+          btn.dataset.key==='home'?'Home!':
+          btn.dataset.key==='nov3'?'Mark restored':
+          btn.dataset.key==='oct15'?'Mark handled':'Mark done'
+        );
+        btn.closest('.event')?.classList.toggle('done',done);
+      });
+      const when=state.lastUpdated?new Date(state.lastUpdated).toLocaleString():'not saved yet';
+      $('syncText').textContent='Last saved: '+when;
+    }
+
+    async function load(){
+      try{
+        const r=await fetch(API,{cache:'no-store'});
+        if(!r.ok) throw new Error('load failed');
+        const saved=await r.json();
+        state={...defaults,...saved,completed:{...(saved.completed||{})}};
+        render();
+      }catch(e){
+        $('syncText').textContent='Could not load online state — showing starting plan.';
+        render();
+      }
+    }
+
+    async function save(){
+      const btn=$('saveBtn');btn.disabled=true;$('saveStatus').textContent='Saving…';
+      ['savings','flightFund','hotelFund','tripCushion','tripSpent'].forEach(k=>state[k]=Math.max(0,Number($(k).value)||0));
+      state.notes=$('notes').value;
+      try{
+        const r=await fetch(API,{method:'PUT',headers:{'content-type':'application/json'},body:JSON.stringify(state)});
+        if(!r.ok) throw new Error('save failed');
+        state=await r.json();
+        $('saveStatus').textContent='Saved online ✓';
+        render();
+      }catch(e){$('saveStatus').textContent='Save failed — try again.'}
+      finally{btn.disabled=false}
+    }
+
+    document.querySelectorAll('.check').forEach(btn=>btn.addEventListener('click',async()=>{
+      state.completed=state.completed||{};
+      state.completed[btn.dataset.key]=!state.completed[btn.dataset.key];
+      render();
+      await save();
+    }));
+    $('saveBtn').addEventListener('click',save);
+    $('saveNotes').addEventListener('click',save);
+    load();
+  </script>
+</body>
+</html>
