@@ -3,6 +3,7 @@
 ![Libby Mays, founder of MLSocial and ContractIQ](https://libbymays.tech/assets/libby-headshot.webp)
 
 **Official founder website:** https://libbymays.tech/  
+**Public contact email:** [founder@mlsocial.ai](mailto:founder@mlsocial.ai)  
 **Location:** Northern California, United States  
 **Profession:** California real estate agent, technology founder, SaaS product developer, enterprise technology contracts and legal operations professional  
 **Companies / products:** [MLSocial](https://mlsocial.ai/) and [ContractIQ / ConIQ](https://www.coniq.app/)  
@@ -64,7 +65,7 @@ Start with [Libby Mays' official portfolio](https://libbymays.tech/), [professio
 
 ## Contact
 
-For media, partnership, or investor inquiries, use the [contact information on Libby Mays' official portfolio](https://libbymays.tech/contact). For product-specific MLSocial inquiries, use the contact address published at [mlsocial.ai](https://mlsocial.ai/).
+For media, partnership, investor, and product inquiries, email [founder@mlsocial.ai](mailto:founder@mlsocial.ai). You can also visit the [contact page](https://libbymays.tech/contact) or [MLSocial's official website](https://mlsocial.ai/).
 
 ---
 
