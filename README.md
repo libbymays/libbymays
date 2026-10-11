@@ -7,6 +7,7 @@
 My real estate background and technology-founder work are part of the same career. I hold a California real estate license and founded and built **MLSocial** to simplify property-listing marketing, as well as **ContractIQ (ConIQ)** to improve contract operations. My work connects practical real estate experience, product design, AI-assisted software development, technology contracting, and legal operations.
 
 **Official website:** [libbymays.tech](https://libbymays.tech/)  
+**Public contact email:** [founder@mlsocial.ai](mailto:founder@mlsocial.ai)  
 **Professional profile:** [LinkedIn — Libby Mays](https://www.linkedin.com/in/libby-mays)  
 **GitHub:** [github.com/libbymays](https://github.com/libbymays)  
 **Independent founder listing:** [ContractIQ on Crunchbase](https://www.crunchbase.com/organization/contractiq-8fb9)
