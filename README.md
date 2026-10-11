@@ -8,7 +8,8 @@ I founded and built **MLSocial** and **ContractIQ (ConIQ)** to solve workflow pr
 
 **Official website:** [libbymays.tech](https://libbymays.tech/)  
 **Professional profile:** [LinkedIn — Libby Mays](https://www.linkedin.com/in/libby-mays)  
-**GitHub:** [github.com/libbymays](https://github.com/libbymays)
+**GitHub:** [github.com/libbymays](https://github.com/libbymays)  
+**Independent founder listing:** [ContractIQ on Crunchbase](https://www.crunchbase.com/organization/contractiq-8fb9)
 
 ## Products I founded
 
@@ -33,6 +34,7 @@ I work at the intersection of enterprise technology agreements, supplier relatio
 
 ## Find me online
 
+- [ContractIQ founder information on Crunchbase](https://www.crunchbase.com/organization/contractiq-8fb9)
 - [Personal portfolio and biography](https://libbymays.tech/)
 - [LinkedIn](https://www.linkedin.com/in/libby-mays)
 - [MLSocial](https://mlsocial.ai/)
