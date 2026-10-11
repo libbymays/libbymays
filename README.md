@@ -1,17 +1,41 @@
 # Libby Mays
 
-Founder and product developer building SaaS products around real workflow problems.
+<img src="https://libbymays.tech/assets/libby-headshot.webp" alt="Libby Mays, founder of MLSocial and ContractIQ" width="180" align="right" />
 
-## MLSocial
+**Technology founder, SaaS product developer, and enterprise technology contracts professional based in Northern California.**
 
-Founder of [MLSocial](https://mlsocial.ai), an AI-enabled real estate marketing platform designed to streamline the path from property listing to branded social content.
+I founded and built **MLSocial** and **ContractIQ (ConIQ)** to solve workflow problems I encountered in real-world business operations. My work combines product architecture, AI-assisted software development, technology contracting, contract lifecycle management, and legal operations.
 
-## ContractIQ
+**Official website:** [libbymays.tech](https://libbymays.tech/)  
+**Professional profile:** [LinkedIn — Libby Mays](https://www.linkedin.com/in/libby-mays)  
+**GitHub:** [github.com/libbymays](https://github.com/libbymays)
 
-Founder and product developer of [ContractIQ](https://www.coniq.app), a contract operations and contract lifecycle management platform designed around contract intake, review, redlining, approvals, collaboration, execution, and lifecycle visibility.
+## Products I founded
 
-## Professional Focus
+### MLSocial — Real estate marketing SaaS
 
-Technology Contracts • Contract Lifecycle Management • Legal Operations • SaaS Product Development • AI-Enabled Workflow Design
+[MLSocial](https://mlsocial.ai/) is an AI-enabled platform designed to turn property listing information and media into branded, social-ready marketing content. It brings listing data, content generation, agent branding, and social publishing into one workflow.
 
-[Portfolio](https://libbymays.tech) • [LinkedIn](https://www.linkedin.com/in/libby-mays)
+- Official site: https://mlsocial.ai/
+- Founder: Libby Mays
+
+### ContractIQ (ConIQ) — Contract operations SaaS
+
+[ContractIQ](https://www.coniq.app/) is a contract operations and contract lifecycle management platform designed for intake, document review and redlining, approvals, collaboration, execution readiness, repository management, and lifecycle visibility.
+
+- Official site: https://www.coniq.app/
+- Founder and product developer: Libby Mays
+- Product identity: ContractIQ / ConIQ (not the unrelated company operating contractiq.com)
+
+## Professional background
+
+I work at the intersection of enterprise technology agreements, supplier relationships, legal operations, AI-enabled workflow design, and software product development. My background also includes regulated healthcare legal operations, real estate, and client-facing technology work.
+
+## Find me online
+
+- [Personal portfolio and biography](https://libbymays.tech/)
+- [LinkedIn](https://www.linkedin.com/in/libby-mays)
+- [MLSocial](https://mlsocial.ai/)
+- [ContractIQ / ConIQ](https://www.coniq.app/)
+
+This GitHub profile and the websites linked above refer to the same **Libby Mays**, the Northern California technology founder and product developer.
