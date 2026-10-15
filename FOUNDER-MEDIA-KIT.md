@@ -12,6 +12,10 @@
 **Public independent company listing:** [ContractIQ on Crunchbase](https://www.crunchbase.com/organization/contractiq-8fb9)  
 **Official photo:** [Libby Mays professional headshot](https://libbymays.tech/assets/libby-headshot.webp)
 
+## Independent press coverage
+
+- **The Founder Gazette (October 2026):** [Estate agent builds listing-first social tool, tests two platforms](https://www.thefoundergazette.com/stories/estate-agent-builds-listing-first-social-tool-tests-two-plat). Coverage of MLSocial Inc. and its Facebook and Instagram workflow testing.
+
 ## Biography (short)
 
 **Libby Mays** is a Northern California real estate agent, technology entrepreneur, and product developer. She holds a California real estate license and founded **MLSocial**, an AI-enabled real-estate marketing platform, and **ContractIQ (ConIQ)**, a contract-operations and contract lifecycle management platform. Her work combines real estate experience, enterprise technology contracts, legal-operations knowledge, and AI-assisted software development.
@@ -62,6 +66,7 @@ Start with [Libby Mays' official portfolio](https://libbymays.tech/), [professio
 - [ContractIQ official site](https://www.coniq.app/)
 - [ContractIQ on Crunchbase](https://www.crunchbase.com/organization/contractiq-8fb9)
 - [Github profile](https://github.com/libbymays)
+- [MLSocial feature in The Founder Gazette](https://www.thefoundergazette.com/stories/estate-agent-builds-listing-first-social-tool-tests-two-plat)
 
 ## Contact
 
@@ -69,4 +74,4 @@ For media, partnership, investor, and product inquiries, email [founder@mlsocial
 
 ---
 
-*This is a founder-supplied factual press/resource sheet. It is not an independent editorial article, an award, a paid ranking, or a claim that any outlet has covered the founder. Publishers should independently verify material facts before reuse.*
+*This is a founder-supplied factual press/resource sheet. It is not an independent editorial article, an award, a paid ranking, or a claim of editorial independence or endorsement beyond the linked coverage. Publishers should independently verify material facts before reuse.*
