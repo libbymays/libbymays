@@ -12,6 +12,10 @@ My real estate background and technology-founder work are part of the same caree
 **GitHub:** [github.com/libbymays](https://github.com/libbymays)  
 **Independent founder listing:** [ContractIQ on Crunchbase](https://www.crunchbase.com/organization/contractiq-8fb9)
 
+## In the press
+
+**The Founder Gazette (October 2026):** [Estate agent builds listing-first social tool, tests two platforms](https://www.thefoundergazette.com/stories/estate-agent-builds-listing-first-social-tool-tests-two-plat) — coverage of MLSocial, its listing-first product concept, and Facebook and Instagram publishing tests.
+
 ## Founder media kit and verified identity links
 
 For journalists, investors, partners, or anyone researching the technology founder **Libby Mays**, see the **[founder fact sheet and media resources](https://github.com/libbymays/libbymays/blob/main/FOUNDER-MEDIA-KIT.md)**, including a professional photograph, short and extended biographies, company links, and frequently asked questions.
