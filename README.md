@@ -1,52 +1,61 @@
-# Libby Mays
+# Libby Mays — Technology Founder | MLSocial & ContractIQ
 
-<img src="https://libbymays.tech/assets/libby-headshot.webp" alt="Libby Mays, founder of MLSocial and ContractIQ" width="180" align="right" />
+<img src="https://libbymays.tech/assets/libby-headshot.webp" alt="Libby Mays, Northern California technology founder and founder of MLSocial and ContractIQ" width="180" align="right" />
 
-**Northern California real estate agent, technology founder, SaaS product developer, and enterprise technology contracts professional.**
+**Libby Mays is a Northern California technology founder, SaaS product developer, enterprise technology contracts professional, and California real estate agent. She is the founder of MLSocial and ContractIQ (ConIQ).**
 
-My real estate background and technology-founder work are part of the same career. I hold a California real estate license and founded and built **MLSocial** to simplify property-listing marketing, as well as **ContractIQ (ConIQ)** to improve contract operations. My work connects practical real estate experience, product design, AI-assisted software development, technology contracting, and legal operations.
+My work sits at the intersection of technology, AI-enabled software, enterprise contracts, vendor operations, legal operations, and real estate. I founded and built **MLSocial** to simplify listing-to-social marketing and **ContractIQ (ConIQ)** to improve enterprise contract operations and lifecycle visibility.
 
-**Official website:** [libbymays.tech](https://libbymays.tech/)  
-**Public contact email:** [founder@mlsocial.ai](mailto:founder@mlsocial.ai)  
-**Professional profile:** [LinkedIn — Libby Mays](https://www.linkedin.com/in/libby-mays)  
-**GitHub:** [github.com/libbymays](https://github.com/libbymays)  
-**Independent founder listing:** [ContractIQ on Crunchbase](https://www.crunchbase.com/organization/contractiq-8fb9)
+## Official identity links
 
-## In the press
+- **Personal portfolio:** [libbymays.tech](https://libbymays.tech/)
+- **LinkedIn:** [Libby Mays](https://www.linkedin.com/in/libby-mays)
+- **MLSocial:** [mlsocial.ai](https://mlsocial.ai/)
+- **ContractIQ / ConIQ:** [coniq.app](https://www.coniq.app/)
+- **Public contact:** [founder@mlsocial.ai](mailto:founder@mlsocial.ai)
+- **GitHub:** [github.com/libbymays](https://github.com/libbymays)
+- **ContractIQ on Crunchbase:** [ContractIQ](https://www.crunchbase.com/organization/contractiq-8fb9)
 
-**The Founder Gazette (October 2026):** [Estate agent builds listing-first social tool, tests two platforms](https://www.thefoundergazette.com/stories/estate-agent-builds-listing-first-social-tool-tests-two-plat) — coverage of MLSocial, its listing-first product concept, and Facebook and Instagram publishing tests.
+## Independent press coverage
 
-## Founder media kit and verified identity links
+**The Founder Gazette — October 2026:**  
+[Estate agent builds listing-first social tool, tests two platforms](https://www.thefoundergazette.com/stories/estate-agent-builds-listing-first-social-tool-tests-two-plat)
 
-For journalists, investors, partners, or anyone researching the technology founder **Libby Mays**, see the **[founder fact sheet and media resources](https://github.com/libbymays/libbymays/blob/main/FOUNDER-MEDIA-KIT.md)**, including a professional photograph, short and extended biographies, company links, and frequently asked questions.
+The article profiles Libby Mays as the founder of MLSocial and covers the product's listing-first approach to helping real estate professionals turn existing property information into branded social content.
 
-## Products I founded
+## Founder media kit
 
-### MLSocial — Real estate marketing SaaS
+For journalists, investors, partners, recruiters, or anyone researching **Libby Mays, technology founder**, see the **[founder fact sheet and media resources](https://github.com/libbymays/libbymays/blob/main/FOUNDER-MEDIA-KIT.md)** for a professional photograph, biographies, company links, and identity references.
 
-[MLSocial](https://mlsocial.ai/) is an AI-enabled platform designed to turn property listing information and media into branded, social-ready marketing content. It brings listing data, content generation, agent branding, and social publishing into one workflow.
+## Products founded by Libby Mays
 
-- Official site: https://mlsocial.ai/
+### MLSocial — AI-enabled real estate marketing SaaS
+
+[MLSocial](https://mlsocial.ai/) is designed to turn property listing information and media into branded, social-ready marketing content. The workflow brings listing data, content generation, agent branding, review, and social publishing into one connected experience.
+
+- Official website: https://mlsocial.ai/
 - Founder: Libby Mays
+- Company: MLSocial, Inc.
 
-### ContractIQ (ConIQ) — Contract operations SaaS
+### ContractIQ (ConIQ) — Enterprise contract operations SaaS
 
-[ContractIQ](https://www.coniq.app/) is a contract operations and contract lifecycle management platform designed for intake, document review and redlining, approvals, collaboration, execution readiness, repository management, and lifecycle visibility.
+[ContractIQ](https://www.coniq.app/) is a contract operations and lifecycle-management platform designed around intake, document review and redlining, approvals, collaboration, execution readiness, repository management, and lifecycle visibility.
 
-- Official site: https://www.coniq.app/
+- Official website: https://www.coniq.app/
 - Founder and product developer: Libby Mays
-- Product identity: ContractIQ / ConIQ (not the unrelated company operating contractiq.com)
+- Product identity: ContractIQ / ConIQ
 
 ## Professional background
 
-I work at the intersection of enterprise technology agreements, supplier relationships, legal operations, AI-enabled workflow design, and software product development. My background also includes regulated healthcare legal operations, California real estate practice, and client-facing technology work.
+I work at the intersection of enterprise technology agreements, supplier relationships, IT finance, governance, legal operations, AI-enabled workflow design, and software product development. My background also includes regulated healthcare legal operations, California real estate practice, client-facing technology work, and multi-site community program leadership.
 
-## Find me online
+## Find Libby Mays online
 
-- [ContractIQ founder information on Crunchbase](https://www.crunchbase.com/organization/contractiq-8fb9)
 - [Personal portfolio and biography](https://libbymays.tech/)
 - [LinkedIn](https://www.linkedin.com/in/libby-mays)
 - [MLSocial](https://mlsocial.ai/)
 - [ContractIQ / ConIQ](https://www.coniq.app/)
+- [Founder Gazette coverage](https://www.thefoundergazette.com/stories/estate-agent-builds-listing-first-social-tool-tests-two-plat)
+- [ContractIQ on Crunchbase](https://www.crunchbase.com/organization/contractiq-8fb9)
 
-This GitHub profile and the websites linked above refer to the same **Libby Mays**: a Northern California real estate agent, technology founder, and the creator of MLSocial and ContractIQ. They do not refer to unrelated people who share this name.
+This GitHub profile refers to **Libby Mays, the Northern California technology founder and creator of MLSocial and ContractIQ**.
